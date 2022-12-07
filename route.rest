@@ -1,0 +1,35 @@
+### Get All Employees
+GET http://localhost:3000/employees
+
+### Get One Employee
+
+GET http://localhost:3000/employees/638fc1cba66f9acfecd9c138
+
+
+### Post One Employee
+
+POST http://localhost:3000/employees
+Content-Type: application/json
+
+
+{
+    "firstName": "fsdgfs",
+    "lastName": "sdfsdfds",
+    "birthDate": "1990-02-01"
+}
+
+
+### update one employee
+POST http://localhost:3000/employees/6391213c021090d14f73bd8b
+Content-Type: application/json
+
+{
+    "firstName": "aaaa",
+    "lastName": "ffff",
+    "birthDate": "1960-02-01"
+}
+
+
+### Delete One Employee
+
+DELETE http://localhost:3000/employees/6391213c021090d14f73bd8b
