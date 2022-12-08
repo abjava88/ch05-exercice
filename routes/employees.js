@@ -33,18 +33,9 @@ router.post('/', async (req, res) => {
 })
 
 // Updating One
-router.post('/:id', getEmployee, async (req, res) => {
-  if (req.body.firstName != null) {
-    res.employee.firstName = req.body.firstName
-  }
-  if (req.body.lastName != null) {
-    res.employee.lastName = req.body.lastName
-  }
-  if (req.body.birthDate != null) {
-    res.employee.birthDate = req.body.birthDate
-  }
+router.post('/:id', async (req, res) => {
   try {
-    const modifiedEmployee = await res.employee.save()
+    const modifiedEmployee = await Employee.findByIdAndUpdate(req.params.id, {firstName: req.body.firstName, lastName: req.body.lastName, birthDate: req.body.birthDate})
     res.json(modifiedEmployee)
   } catch (err) {
     res.status(400).json({ message: err.message })

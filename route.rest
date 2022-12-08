@@ -20,12 +20,12 @@ Content-Type: application/json
 
 
 ### update one employee
-POST http://localhost:3000/employees/6391213c021090d14f73bd8b
+POST http://localhost:3000/employees/6391287d4c5cf6ee562ea12b
 Content-Type: application/json
 
 {
-    "firstName": "aaaa",
-    "lastName": "ffff",
+    "firstName": "fghsdgh",
+    "lastName": "dgeqrygq",
     "birthDate": "1960-02-01"
 }
 
